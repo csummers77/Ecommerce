@@ -1,4 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
+import loginTab from '../../misc/openWindow';
+
+class LoginNavBar extends Component {
+    constructor(){
+        super();
+    }
+    githubAuth = (event)=>{
+        loginTab('http://localhost:3000/auth/github')
+    }
+
 
             // 1. User clicks and opens the new window via loginTab
             // 2. New window is open to crossOrigin but is github.com
@@ -12,14 +22,15 @@ import React from 'react';
             // 8. Put it in localstorage so we can use it next time.
 
 
-function LoginNavBar(props){
-    return(
-        <div className="login-nav-bar">
-            <div className="left valign valign-wrapper">WELCOME TO DevGaming</div>
-            <div className="right">MY CART 0 ITEM - £0.00
-            <button type="submit" class="btn play-button btn-github">Login with github</button>
+    render(){
+        return(
+            <div className="login-nav-bar">
+                <div className="left valign valign-wrapper">WELCOME TO DevGaming</div>
+                <div className="right">MY CART 0 ITEM - £0.00
+                <button type="button" onClick={this.githubAuth} class="btn play-button btn-github">Login with github</button>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 export default LoginNavBar;
