@@ -11,8 +11,8 @@ module.exports = {
     pg: {
         host: 'localhost',
         port: 5432,
-        database: 'DevGaming',
-        user: 'webdev',
+        database: 'digitalcrafts',
+        users: 'digitalcrafts',
         password: ''
      }
 }
