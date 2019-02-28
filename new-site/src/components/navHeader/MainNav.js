@@ -3,8 +3,9 @@ import React from 'react';
 function MainNav(props){
     return(
         <div className="main-nav">
-            <nav>
-                <div className="nav-wrapper black">
+        <div className="navbar-fixed">
+        <nav>
+                <div className="nav-wrapper black light 0.9">
                     <ul className="left hide-on-med-and-down">
                         <li><a href="sass.html">Sass</a></li>
                         <li><a href="badges.html">Components</a></li>
@@ -12,6 +13,8 @@ function MainNav(props){
                     </ul>
                 </div>
         </nav>      
+        </div>
+            
 
         </div>
     )

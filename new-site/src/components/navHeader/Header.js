@@ -6,7 +6,7 @@ import './Nav.css'
 
 function Header(props){
 return (
-    <div class="header">
+    <div className="header">
         <div className="container-fluid center grey darken-4">
             <div className="row">
                 <div className="container">

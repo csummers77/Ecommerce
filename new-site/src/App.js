@@ -2,16 +2,27 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from './components/home/Home';
 import Headers from './components/navHeader/Header';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Login from './components/pages/Login';
+import Register from './components/pages/Register';
+import Game from './components/pages/Game'; 
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Headers />
+      <Router>
+        <div>
+          <Headers />
           <div className="container center">
-        <Home />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} /> 
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/game/:id" component={Game} />
+          </div>
         </div>
-      </div>
+
+      </Router>
+
     );
   }
 }
